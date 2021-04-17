@@ -21,6 +21,7 @@ public class HelloControllerMockMvcTest {
 
     @Test
     public void testHello() throws Exception {
+
         String uri = "/hello";
         mockMvc.perform(get(uri))
                 .andExpect(status().isOk())
