@@ -19,8 +19,6 @@ public class HelloControllerTest {
     @Test
     public void testHello() {
         String uri = "/hello";
-        String s = "jay";
-        Assertions.assertEquals("jay", s);
         ResponseEntity response = restTemplate.getForEntity(uri, String.class);
         System.out.println(response.getStatusCode());
         System.out.println(response.getBody());
@@ -28,6 +26,6 @@ public class HelloControllerTest {
         System.out.println(response.getHeaders());
 
         Assertions.assertEquals(200, response.getStatusCodeValue());
-        Assertions.assertEquals("Hello World", response.getBody());
+        Assertions.assertEquals("Hello service", response.getBody());
     }
 }
