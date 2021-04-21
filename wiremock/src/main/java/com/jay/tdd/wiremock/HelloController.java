@@ -18,6 +18,7 @@ public class HelloController {
 
     @GetMapping(path = "/hello")
     public ResponseEntity hello() {
-        return ResponseEntity.ok(helloService.welcome());
+        String welcome = helloService.welcome();
+        return ResponseEntity.ok(welcome);
     }
 }
